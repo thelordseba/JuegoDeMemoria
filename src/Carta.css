@@ -1,12 +1,13 @@
 .carta{
     width: 125px;
-    height: 125px;    
+    height: 125px;       
 }
 
 .front{
     width: 125px;
     height: 125px;   
     background-color: coral;
+    border-radius: 15px;
 }
 
 .back{
@@ -16,6 +17,7 @@
     justify-content: center;
     align-items: center;
     background-color: cyan;
+    border-radius: 15px;
 }
 
 .ReactFlipCard{

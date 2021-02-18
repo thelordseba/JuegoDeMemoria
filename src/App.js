@@ -9,7 +9,8 @@ const getEstadoInicial = ()=>{
   return {
     baraja: baraja,
     parejaSeleccionada: [],                                              
-    estaComparando: false
+    estaComparando: false,
+    numeroDeIntentos: 0
   }
 }
 
@@ -21,11 +22,14 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        <Header/>
+        <Header 
+           intentos={this.state.numeroDeIntentos}
+           reiniciarJuego={()=> this.resetearJuego()}
+           />
         <Tablero 
-          baraja = {this.state.baraja} 
-          parejaSeleccionada = {this.state.parejaSeleccionada}
-          seleccionarCarta = {(carta)=> this.seleccionarCarta(carta)}                                 //Paso al tablero por props el método seleccionarCarta 
+           baraja = {this.state.baraja} 
+           parejaSeleccionada = {this.state.parejaSeleccionada}
+           seleccionarCarta = {(carta)=> this.seleccionarCarta(carta)}                                 //Paso al tablero por props el método seleccionarCarta 
         />
       </div>
     );
@@ -61,17 +65,29 @@ class App extends Component{
         });
       }
 
+      // this.verificarGanador(baraja);
+
       this.setState({
         baraja: baraja,
         parejaSeleccionada: [],
-        estaComparando: false        
+        estaComparando: false,
+        numeroDeIntentos: this.state.numeroDeIntentos + 1        
       });
 
+      this.verificarGanador(baraja);
     }, 1000);
   }
 
-  verificarGanador(){    
+  verificarGanador(baraja){
+    const cartasNoAdivinadas = baraja.filter((carta)=> !carta.fueAdivinada)
+    if(cartasNoAdivinadas.length === 0){
+      alert(`Ganaste en ${this.state.numeroDeIntentos} intentos`);     
+    }
   }
+
+  resetearJuego(){
+    this.setState(getEstadoInicial());
+  };
 
 }
 
@@ -79,19 +95,3 @@ export default App;
 
 
 
-
-
-
-//Componente Funcional
-
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-
-//     </div>
-//   );
-// }
-
-// export default App;
