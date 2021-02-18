@@ -6,7 +6,7 @@
 .front{
     width: 125px;
     height: 125px;   
-    background-color: coral;
+    background-color: rgb(202, 32, 137);
     border-radius: 15px;
 }
 
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cyan;
+    background-color: rgb(205, 241, 255);
     border-radius: 15px;
 }
 

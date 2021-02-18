@@ -10,11 +10,18 @@ header{
 .titulo{
     font-size: 25px;
     padding: 10px;
-    color: whitesmoke;
+    color: rgb(9, 2, 39);    
 }
 
 .boton-reiniciar{
+    background-color: rgb(202, 32, 137);
+    border-radius: 8px;
+    width: 130px;
+    height: 30px;
+    font-size: 20px;
     position: absolute;
-    left: 12px;
-    top: 58px;
+    left: 20px;
+    top: 58px; 
+    color:white;   
+    border:0px;
 }

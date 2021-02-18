@@ -1,5 +1,10 @@
 body{
-  background-color: rgb(26, 11, 155);
+  background-image: url("https://wallpaperaccess.com/full/2092839.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: blue;
 }
 
 div:focus{
