@@ -3,7 +3,7 @@ import FontAwesomeClasses from './fontAwesomeClasses';
 const NUMERO_DE_CARTAS = 20;
 
 export default ()=>{
-    const fontAwesomeClasses = FontAwesomeClasses();
+    const fontAwesomeClasses = FontAwesomeClasses();                                         //FontAwesomwClasses me retorna un array con todas las clases de icono de font awesome
     
     let cartas = [];
 

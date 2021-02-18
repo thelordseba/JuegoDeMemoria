@@ -1,16 +1,15 @@
 .carta{
     width: 125px;
-    height: 125px;   
-    background-color: coral;
+    height: 125px;    
 }
 
-.portada{
+.front{
     width: 125px;
     height: 125px;   
     background-color: coral;
 }
 
-.contenido{
+.back{
     width: 125px;
     height: 125px;   
     display: flex;
