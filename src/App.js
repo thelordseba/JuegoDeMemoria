@@ -87,7 +87,11 @@ class App extends Component{
         text: `Ganaste la partida en ${this.state.numeroDeIntentos} intentos.`,
         icon: "success",
         button: "Aceptar",
+      })
+      .then(()=>{
+        this.resetearJuego();
       });
+      
     }
   }
 
