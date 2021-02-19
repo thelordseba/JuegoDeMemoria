@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Tablero from './Tablero';
 import construirBaraja from './utils/construirBaraja';
+import swal from 'sweetalert';
 
 const getEstadoInicial = ()=>{
   const baraja = construirBaraja();
@@ -65,8 +66,6 @@ class App extends Component{
         });
       }
 
-      // this.verificarGanador(baraja);
-
       this.setState({
         baraja: baraja,
         parejaSeleccionada: [],
@@ -75,14 +74,20 @@ class App extends Component{
       });
 
       this.verificarGanador(baraja);
+
     }, 1000);
   }
 
   verificarGanador(baraja){
     const cartasNoAdivinadas = baraja.filter((carta)=> !carta.fueAdivinada)
     if(cartasNoAdivinadas.length === 0){
-      alert(`Ganaste en ${this.state.numeroDeIntentos} intentos`);     
-         
+      
+      swal({
+        title: "FELICITACIONES!!!!!",
+        text: `Ganaste la partida en ${this.state.numeroDeIntentos} intentos.`,
+        icon: "success",
+        button: "Aceptar",
+      });
     }
   }
 
