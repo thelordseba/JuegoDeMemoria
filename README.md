@@ -6,5 +6,6 @@ El mismo fue realizado a modo de práctica y me he basado en el curso de React d
 Aquí dejo el enlace para que lo puedas probar:
 [Juego de Memoria](https://thelordseba.github.io/JuegoDeMemoria/)
 
-![github-small](https://github.com/thelordseba/JuegoDeMemoria/blob/master/src/utils/JUEGO.png)
+![github-small](https://github.com/thelordseba/JuegoDeMemoria/blob/master/src/utils/JUEGO.png )
+[Juego de Memoria](https://thelordseba.github.io/JuegoDeMemoria)
 
