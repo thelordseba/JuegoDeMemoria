@@ -82,7 +82,7 @@ class App extends Component{
     const cartasNoAdivinadas = baraja.filter((carta)=> !carta.fueAdivinada)
     if(cartasNoAdivinadas.length === 0){
       alert(`Ganaste en ${this.state.numeroDeIntentos} intentos`);     
-      
+         
     }
   }
 
