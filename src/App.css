@@ -10,3 +10,10 @@ body{
 div:focus{
   outline: none !important;
 }
+
+@media screen and (max-width: 414px){   
+  .App{       
+      width: 414px;
+      height: 600;           
+  }
+}
