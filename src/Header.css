@@ -1,6 +1,5 @@
 header{
     height: 50px;
-    border: 1px solid black;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -10,7 +9,7 @@ header{
 .titulo{
     font-size: 25px;
     padding: 10px;
-    color: rgb(9, 2, 39);
+    color: rgb(9, 2, 39);   
 }
 
 .boton-reiniciar{
@@ -23,5 +22,20 @@ header{
     left: 20px;
     top: 58px; 
     color:white;   
-    border:0px;
+    border:0px;        
 }
+
+@media screen and (max-width: 414px){   
+    header{
+        height: 100px;                
+    }
+
+    .boton-reiniciar{
+        margin-top: 5px;
+    }
+}
+
+
+.boton-reiniciar:hover {
+    background-color: rgba(155, 58, 118, 0.842);
+  }
